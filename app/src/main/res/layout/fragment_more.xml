@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/fragment_bg_color">
+
+    <include
+        android:id="@+id/action_bar_layout"
+        layout="@layout/toolbar_top_view"/>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_container"
+        android:layout_below="@id/action_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/aTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="a: "
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/aEditText"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:text="0"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/bTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="b: "
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/bEditText"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:text="0"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/cTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="c: "
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/cEditText"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:text="0"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/zTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="z: "
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/zTextVal"
+                    android:layout_width="85dp"
+                    android:layout_height="34dp"
+                    android:gravity="left|center_vertical"
+                    android:text="0"
+                    android:textColor="#090808"
+                    android:textSize="16sp" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <TextView
+                android:id="@+id/BillingInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:gravity="center"
+                android:text="BILLING INFORMATION"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/setDateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Billing Cycle Start Date: "
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/setDateButton"
+                    android:layout_width="120dp"
+                    android:layout_height="41dp"
+                    android:backgroundTint="#d70404"
+                    android:onClick="setDate"
+                    android:text="Set Date"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/billingCycleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Billing Frequency: "
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/billingCycleSpinner"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Spinner
+                    android:id="@+id/billingStructureSpinner"
+                    android:layout_width="380dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:spinnerMode="dropdown" />
+
+                <Button
+                    android:id="@+id/ToSetSeasonDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:backgroundTint="#d70404"
+                    android:onClick="setSeasonDetails"
+                    android:text="Season Details" />
+
+                <LinearLayout
+                    android:id="@+id/ZoneHolidayLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <Button
+                        android:id="@+id/ToSetZoneDetails"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#d70404"
+                        android:onClick="setZoneDetails"
+                        android:text="TOU Zone Details" />
+
+                    <Button
+                        android:id="@+id/ToSetHolidayDetails"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#d70404"
+                        android:onClick="setHolidayDetails"
+                        android:text="Holidays" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/ToSetTOUDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:backgroundTint="#d70404"
+                    android:onClick="setTouDetails"
+                    android:text="Time Billing Applicable" />
+
+
+                <Button
+                    android:id="@+id/ToSetTierRanges"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:backgroundTint="#d70404"
+                    android:onClick="setTierRanges"
+                    android:text="Energy Tier Ranges" />
+
+                <Button
+                    android:id="@+id/ToSetUtilityRates"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:backgroundTint="#d70404"
+                    android:onClick="setUtilityRates"
+                    android:text="Utility Rates ($ / kWh)" />
+
+                <LinearLayout
+                    android:id="@+id/FixedRegLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <Button
+                        android:id="@+id/ToSetFixed"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#d70404"
+                        android:onClick="setFixedCharges"
+                        android:text="Fixed Charges Per Cycle" />
+
+                    <Button
+                        android:id="@+id/ToSetReg"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#d70404"
+                        android:onClick="setRegCharges"
+                        android:text="Regulatory Charges Per Cycle" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/DeliveryTaxLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <Button
+                        android:id="@+id/ToSetDelivery"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#d70404"
+                        android:onClick="setDelivery"
+                        android:text="Delivery Rates" />
+
+                    <Button
+                        android:id="@+id/ToSetTaxRates"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#d70404"
+                        android:onClick="setTaxRates"
+                        android:text="Tax Rates" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/totalText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Projected Cycle Cost"
+                        android:textAllCaps="false"
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/total"
+                        android:layout_width="180dp"
+                        android:layout_height="70dp"
+                        android:background="@drawable/layout_border"
+                        android:gravity="center"
+                        android:textColor="#000000"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal"
+                android:gravity="bottom"
+                android:weightSum="2">
+
+
+                <Button
+                    android:id="@+id/clearData"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:onClick="clearSavedData"
+                    android:text="Clear Saved Values"
+                    android:textSize="10sp"
+                    android:backgroundTint="#BBCED1" />
+
+                <Button
+                    android:id="@+id/saveData"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:onClick="saveCurrentData"
+                    android:text="Save Values"
+                    android:textSize="10sp"
+                    android:backgroundTint="#2196F3" />
+            </LinearLayout>
+
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <RelativeLayout
+        android:id="@+id/list_background_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="60dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_none_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ty_nolist_logo"/>
+
+        <TextView
+            android:id="@+id/tv_none_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_none_data"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:text="@string/ty_no_data"
+            android:textColor="@color/text_color2"
+            android:textSize="@dimen/ts_16"/>
+
+        <TextView
+            android:id="@+id/tv_add_scene"
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/tv_none_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/btn_add_share_none_bg"
+            android:gravity="center"
+            android:text="@string/add_scene"
+            android:textColor="@color/text_color2"/>
+        <TextView
+            android:id="@+id/tv_add_auto"
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/tv_add_scene"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/btn_add_share_none_bg"
+            android:gravity="center"
+            android:text="@string/add_auto"
+            android:textColor="@color/text_color2"/>
+    </RelativeLayout>
+</RelativeLayout>

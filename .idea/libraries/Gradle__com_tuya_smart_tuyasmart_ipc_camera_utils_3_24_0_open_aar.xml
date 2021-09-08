@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.tuya.smart:tuyasmart-ipc-camera-utils:3.24.0-open@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/be2290d1824a16fb281c61346237d4b9/jetified-tuyasmart-ipc-camera-utils-3.24.0-open/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/be2290d1824a16fb281c61346237d4b9/jetified-tuyasmart-ipc-camera-utils-3.24.0-open/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/be2290d1824a16fb281c61346237d4b9/jetified-tuyasmart-ipc-camera-utils-3.24.0-open/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.tuya.smart/tuyasmart-ipc-camera-utils/3.24.0-open/62d9a2c0b6b6afea4dcfd09689e5eaef19209e60/tuyasmart-ipc-camera-utils-3.24.0-open-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

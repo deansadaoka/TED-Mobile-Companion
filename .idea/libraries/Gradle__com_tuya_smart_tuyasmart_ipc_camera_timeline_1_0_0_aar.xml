@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.tuya.smart:tuyasmart-ipc-camera-timeline:1.0.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e2edeba5f7b9999df27f3064270adf40/jetified-tuyasmart-ipc-camera-timeline-1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e2edeba5f7b9999df27f3064270adf40/jetified-tuyasmart-ipc-camera-timeline-1.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e2edeba5f7b9999df27f3064270adf40/jetified-tuyasmart-ipc-camera-timeline-1.0.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.tuya.smart/tuyasmart-ipc-camera-timeline/1.0.0/b763c9cd2fcfdad29424ca419cd61042a52e38aa/tuyasmart-ipc-camera-timeline-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

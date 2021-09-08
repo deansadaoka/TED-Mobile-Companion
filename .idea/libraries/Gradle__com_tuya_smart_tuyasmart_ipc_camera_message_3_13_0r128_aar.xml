@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.tuya.smart:tuyasmart-ipc-camera-message:3.13.0r128@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1f468ca2b0961bb777487922dc7d14e4/jetified-tuyasmart-ipc-camera-message-3.13.0r128/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1f468ca2b0961bb777487922dc7d14e4/jetified-tuyasmart-ipc-camera-message-3.13.0r128/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1f468ca2b0961bb777487922dc7d14e4/jetified-tuyasmart-ipc-camera-message-3.13.0r128/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.tuya.smart/tuyasmart-ipc-camera-message/3.13.0r128/b7a53c68f0933cfdeae44227f900631b7bab5b77/tuyasmart-ipc-camera-message-3.13.0r128-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: com.tuya.smart:tuyasmart-ipc-camera-sdk-api:3.24.0-open@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e4480987ee9161cecef13067dedce101/jetified-tuyasmart-ipc-camera-sdk-api-3.24.0-open/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e4480987ee9161cecef13067dedce101/jetified-tuyasmart-ipc-camera-sdk-api-3.24.0-open/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e4480987ee9161cecef13067dedce101/jetified-tuyasmart-ipc-camera-sdk-api-3.24.0-open/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e4480987ee9161cecef13067dedce101/jetified-tuyasmart-ipc-camera-sdk-api-3.24.0-open/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.tuya.smart/tuyasmart-ipc-camera-sdk-api/3.24.0-open/7e381adccb21445d8fa1bc9958769a3251f68c59/tuyasmart-ipc-camera-sdk-api-3.24.0-open-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

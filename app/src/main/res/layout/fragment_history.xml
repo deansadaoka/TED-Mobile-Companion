@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/fragment_bg_color">
+
+    <include
+        android:id="@+id/action_bar_layout"
+        layout="@layout/toolbar_top_view"/>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_container"
+        android:layout_below="@id/action_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/power_over_time_dropdown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/phone_button_margin_left"
+                    android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+                    android:gravity="center|right"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/insignia"
+                    android:textSize="16sp"
+                    android:text="Power Over Time (kWh)"/>
+
+                <TextView
+                    android:id="@+id/history_day_dropdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/phone_button_margin_right"
+                    android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+                    android:gravity="center|right"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/insignia"
+                    android:textSize="16sp"
+                    android:text="Day"/>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.jjoe64.graphview.GraphView
+                android:id="@+id/history_graph"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/phone_button_margin_left"
+                android:layout_marginRight="@dimen/phone_button_margin_right"
+                android:layout_height="175dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/phone_button_margin_left"
+                android:layout_marginRight="@dimen/phone_button_margin_right"
+                android:layout_marginTop="16dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="0dp"
+                android:gravity="center|bottom"
+                android:text="Consumption"
+                android:fontFamily="@font/insignia"
+                android:textSize="18sp"
+                android:background="#0099ff"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:layout_marginLeft="@dimen/phone_button_margin_left"
+                android:layout_marginRight="@dimen/phone_button_margin_right"
+                android:orientation="vertical"
+                android:weightSum="2"
+                android:background="@drawable/border_consumption_history" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:gravity="center" >
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:weightSum="2"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.3"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:text="Highest"
+                            android:fontFamily="@font/insignia"
+                            android:textSize="18sp"
+                            android:gravity="center|top" />
+
+                        <TextView
+                            android:id="@+id/history_highest"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="4dp"
+                            android:layout_weight="0.7"
+                            android:textColor="@color/black"
+                            android:textStyle="normal"
+                            android:text="0.000 kWh"
+                            android:fontFamily="@font/insignia"
+                            android:textSize="16sp"
+                            android:gravity="center|top" />
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:weightSum="2"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.3"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:text="Lowest"
+                            android:fontFamily="@font/insignia"
+                            android:textSize="18sp"
+                            android:gravity="center|top" />
+
+                        <TextView
+                            android:id="@+id/history_lowest"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="4dp"
+                            android:layout_weight="0.7"
+                            android:textColor="@color/black"
+                            android:textStyle="normal"
+                            android:text="0.000 kWh"
+                            android:fontFamily="@font/insignia"
+                            android:textSize="16sp"
+                            android:gravity="center|top" />
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:gravity="center" >
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:weightSum="2"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.3"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/insignia"
+                            android:text="Average"
+                            android:textSize="18sp"
+                            android:gravity="center|top" />
+
+                        <TextView
+                            android:id="@+id/history_average"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="4dp"
+                            android:layout_weight="0.7"
+                            android:textColor="@color/black"
+                            android:textStyle="normal"
+                            android:text="0.000 kWh"
+                            android:fontFamily="@font/insignia"
+                            android:textSize="16sp"
+                            android:gravity="center|top" />
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:weightSum="2"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.3"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:text="Total"
+                            android:fontFamily="@font/insignia"
+                            android:textSize="18sp"
+                            android:gravity="center|top" />
+
+                        <TextView
+                            android:id="@+id/history_total"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="4dp"
+                            android:layout_weight="0.7"
+                            android:textColor="@color/black"
+                            android:textStyle="normal"
+                            android:text="0.000 kWh"
+                            android:fontFamily="@font/insignia"
+                            android:textSize="16sp"
+                            android:gravity="center|top" />
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/phone_button_margin_left"
+                android:layout_marginRight="@dimen/phone_button_margin_right"
+                android:layout_marginTop="16dp"
+                android:weightSum="2"
+                android:orientation="horizontal" >
+
+                <ImageButton
+                    android:id="@+id/button_export_csv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:src="@drawable/button_export_csv"
+                    android:background="#00000000" />
+
+
+                <ImageButton
+                    android:id="@+id/button_export_pdf"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:src="@drawable/button_export_pdf"
+                    android:background="#00000000" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <RelativeLayout
+        android:id="@+id/list_background_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="60dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_none_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ty_nolist_logo"/>
+
+        <TextView
+            android:id="@+id/tv_none_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_none_data"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:text="@string/ty_no_data"
+            android:textColor="@color/text_color2"
+            android:textSize="@dimen/ts_16"/>
+
+        <TextView
+            android:id="@+id/tv_add_scene"
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/tv_none_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/btn_add_share_none_bg"
+            android:gravity="center"
+            android:text="@string/add_scene"
+            android:textColor="@color/text_color2"/>
+        <TextView
+            android:id="@+id/tv_add_auto"
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/tv_add_scene"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/btn_add_share_none_bg"
+            android:gravity="center"
+            android:text="@string/add_auto"
+            android:textColor="@color/text_color2"/>
+    </RelativeLayout>
+</RelativeLayout>
